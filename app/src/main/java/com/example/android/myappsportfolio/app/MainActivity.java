@@ -1,11 +1,13 @@
 package com.example.android.myappsportfolio.app;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -16,78 +18,20 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // The following lines of code  is how I managed to
-    // display the message when a button is clicked. The code reviewer from Audacity suggested
-    // that I use a Toast method that displays the appropriate strings stored in each button
-    // in the string.xml file. In a second commit, I will change to code to incorporate
-    // these suggestions. This represents my best effort on my first submission. :-)
-    // Also, he suggested to use colors.xml for the button background colors. I will do that
-    // on the second commit.
+    public void displayToast(View view){
 
-    // Button 1
+        Button button = (Button) view;
 
-    public void sendMessageButton1(View view){
-        displayMessageButton1("This button will launch SPOTIFY STREAMER");
-    }
+        String buttonText = (String) button.getText();
 
-    private void displayMessageButton1(String message1){
-        TextView quantityTextView = (TextView) findViewById(R.id.button1);
-        quantityTextView.setText("" + message1);
-    }
+        Context context = getApplicationContext();
+        // open_app would add "Opens the app"
+        CharSequence text = getString(R.string.open_app)
+                + " " + buttonText;
+        int duration = Toast.LENGTH_SHORT;
 
-    // Button 2
-
-    public void sendMessageButton2(View view){
-        displayMessageButton2("This button will launch SCORES APP");
-    }
-
-    private void displayMessageButton2(String message2){
-        TextView quantityTextView = (TextView) findViewById(R.id.button2);
-        quantityTextView.setText("" + message2);
-    }
-
-    // Button 3
-
-    public void sendMessageButton3(View view){
-        displayMessageButton3("This button will launch LIBRARY APP!");
-    }
-
-    private void displayMessageButton3(String message3){
-        TextView quantityTextView = (TextView) findViewById(R.id.button3);
-        quantityTextView.setText("" + message3);
-    }
-
-    // Button 4
-
-    public void sendMessageButton4(View view){
-        displayMessageButton4("This button will launch BUILD IT BIGGER");
-    }
-
-    private void displayMessageButton4(String message4){
-        TextView quantityTextView = (TextView) findViewById(R.id.button4);
-        quantityTextView.setText("" + message4);
-    }
-
-    // Button 5
-
-    public void sendMessageButton5(View view){
-        displayMessageButton5("This button will launch XYZ READER");
-    }
-
-    private void displayMessageButton5(String message5){
-        TextView quantityTextView = (TextView) findViewById(R.id.button5);
-        quantityTextView.setText("" + message5);
-    }
-
-    // Button 6
-
-    public void sendMessageButton6(View view){
-        displayMessageButton6("This button will launch MY CAPSTONE APP!");
-    }
-
-    private void displayMessageButton6(String message6){
-        TextView quantityTextView = (TextView) findViewById(R.id.button6);
-        quantityTextView.setText("" + message6);
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 
 

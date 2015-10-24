@@ -13,5 +13,6 @@
     <string name="button4">BUILD IT BIGGER</string>
     <string name="button5">XYZ READER</string>
     <string name="button6">CAPSTONE: MY OWN APP</string>
+    <string name="open_app">Opens the app</string>
 
 </resources>
