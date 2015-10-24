@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/textview"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textIsSelectable="false" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button1"
+        android:id="@+id/button1"
+        android:background="#f08c35"
+        android:textColor="#000000"
+        android:onClick="sendMessageButton1"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button2"
+        android:id="@+id/button2"
+        android:background="#f08c35"
+        android:textColor="#000000"
+        android:onClick="sendMessageButton2"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button3"
+        android:id="@+id/button3"
+        android:background="#f08c35"
+        android:textColor="#000000"
+        android:onClick="sendMessageButton3"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button4"
+        android:id="@+id/button4"
+        android:background="#f08c35"
+        android:textColor="#000000"
+        android:onClick="sendMessageButton4"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button5"
+        android:id="@+id/button5"
+        android:background="#f08c35"
+        android:textColor="#000000"
+        android:onClick="sendMessageButton5"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button6"
+        android:id="@+id/button6"
+        android:background="#e91e63"
+        android:textColor="#FFFFFF"
+        android:onClick="sendMessageButton6"/>
+
+</LinearLayout>
+
